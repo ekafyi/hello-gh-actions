@@ -1,0 +1,11 @@
+# Why yes I'm very creative with names...
+name: My Second Workflow
+
+# 🤔 Can we have a workflow with no associated event?
+on: []
+
+jobs:
+  my-first-job:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "hello world"
