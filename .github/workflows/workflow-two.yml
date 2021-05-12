@@ -2,7 +2,7 @@
 name: My Second Workflow
 
 # 🤔 Can we have a workflow with no associated event?
-on: []
+on: [workflow_dispatch]
 
 jobs:
   my-first-job:
