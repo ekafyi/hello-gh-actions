@@ -1,22 +1,14 @@
-# Name shown in the "Actions" tab
+# Optional name to show in the "Actions" tab
 # name: My First Workflow
 
-# We can write the events in two ways
-# on:
-#   push:
-#   workflow_dispatch:
+# Trigger this workflow on 2 events: push and manual run
 on: [push, workflow_dispatch]
 
-# ❓ can I have an action without jobs?
-# 💡 no. a job is required and it must have steps. else it throws an error.
-
-# ❓ can I call my job anything or is there a requirement?
-# 💡 yes. it's displayed in the single action screen, eg. https://github.com/ekafyi/hello-gh-actions/actions/runs/836142989
-
 jobs:
-  # 🤔 
   my-first-job:
     runs-on: ubuntu-latest
     steps:
-      - name: step-name-one
-        run: echo "hello world"
+      - run: echo "hello world"
+      # Example of optional named step
+      # - name: step-name-one
+      #   run: echo "hello world"
