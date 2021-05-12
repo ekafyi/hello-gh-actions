@@ -1,0 +1,10 @@
+# Name shown in the "Actions" tab
+name: My First Workflow
+
+# We can write the events in two ways
+# on:
+#   push:
+#   workflow_dispatch:
+on: [push, workflow_dispatch]
+
+# 🤔 can I have an action without jobs?
