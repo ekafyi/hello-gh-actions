@@ -8,10 +8,11 @@ name: My First Workflow
 on: [push, workflow_dispatch]
 
 # ❓ can I have an action without jobs?
-# 💡 no, it throws an error.
+# 💡 no. a job is required and it must have steps. else it throws an error.
 
 jobs:
   # 🤔 can I call my job anything or is there a requirement?
   my-first-job:
     runs-on: ubuntu-latest
-    # 🤔 can I have a job without steps?
+    steps:
+      - run: echo "hello world"
