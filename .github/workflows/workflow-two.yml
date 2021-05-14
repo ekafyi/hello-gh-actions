@@ -8,3 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "hello world"
+  # 🤔 can we have multiple jobs?
+  my-second-job:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "hello world again"
