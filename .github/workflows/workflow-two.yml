@@ -7,11 +7,22 @@ jobs:
   my-first-job:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-      - run: npm install -g bats
-      - run: bats -v
-  my-second-job:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "hello world again"
+      # trying contexts
+      - run: |
+          echo "hello world"
+          echo "${{ toJSON(github) }}"
+          echo "======"
+          echo "${{ toJSON(env) }}"
+          echo "======"
+          echo "${{ toJSON(job) }}"
+          echo "======"
+          echo "${{ toJSON(steps) }}"
+          echo "======"
+          echo "${{ toJSON(runner) }}"
+          echo "======"
+          echo "${{ toJSON(strategy) }}"
+          echo "======"
+          echo "${{ toJSON(matrix) }}"
+          echo "======"
+          echo "${{ toJSON(needs) }}"
+          echo "======"
