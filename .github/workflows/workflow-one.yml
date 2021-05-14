@@ -1,8 +1,8 @@
 # Optional name to show in the "Actions" tab
 # name: My First Workflow
 
-# Trigger this workflow on 2 events: push and manual run
-on: [push, workflow_dispatch]
+# Only runs when manually triggered from the "Actions" tab
+on: workflow_dispatch
 
 jobs:
   my-first-job:
