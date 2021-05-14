@@ -7,8 +7,8 @@ jobs:
   my-first-job:
     runs-on: ubuntu-latest
     steps:
-      # trying contexts
-      - run: |
+      - name: dump all contexts
+        run: |
           echo "hello world"
           echo "${{ toJSON(github) }}"
           echo "======"
