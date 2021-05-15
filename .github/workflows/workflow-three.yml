@@ -11,3 +11,7 @@ jobs:
     steps:
       - name: log current branch name
         run: echo "${{ github.ref }}"
+        
+      # how is this different?
+      - name: also log branch name
+        run: echo "${GITHUB_REF#refs/heads/}"
