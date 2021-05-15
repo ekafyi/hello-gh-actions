@@ -1,0 +1,13 @@
+name: My Third Workflow
+
+on:
+#   push:
+#     branches:
+  workflow_dispatch:
+
+jobs:
+  some-job-name:
+    runs-on: ubuntu-latest
+    steps:
+      - name: log current branch name
+        run: echo "${{ github.ref }}"
