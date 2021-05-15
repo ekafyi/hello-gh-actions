@@ -5,6 +5,8 @@ name: My Second Workflow
 # try different trigger event format
 on:
   push:
+    branches:
+      - foo-branch
   workflow_dispatch:
 
 jobs:
