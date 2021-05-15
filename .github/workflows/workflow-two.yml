@@ -1,7 +1,11 @@
 # Why yes I'm very creative with names...
 name: My Second Workflow
 
-on: [push, workflow_dispatch]
+# on: [push, workflow_dispatch]
+# try different trigger event format
+on:
+  push:
+  workflow_dispatch:
 
 jobs:
   my-first-job:
